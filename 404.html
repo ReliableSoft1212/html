@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script>
+var path = window.location.pathname;
+
+// extract last part (OPID)
+var opid = path.split("/").pop();
+
+if(opid){
+  window.location.replace(
+    "https://reliablesoft.co.in/QuickPay.aspx?OPID?" + opid
+  );
+}
+</script>
+</head>
+<body>
+Redirecting...
+</body>
+</html>
