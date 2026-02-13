@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script>
+  // Get last part of URL (OPID)
+  var path = window.location.pathname;
+  var parts = path.split("/");
+  var opid = parts[parts.length - 1];
+
+  // Redirect to real payment URL
+  if(opid && opid !== "pay"){
+    window.location.replace(
+      "https://reliablesoft.co.in/QuickPay.aspx?OPID?" + opid
+    );
+  }
+</script>
+</head>
+<body>
+Redirecting...
+</body>
+</html>
